@@ -7,7 +7,7 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .html, body {
         min-width: 777px;
     }
@@ -315,7 +315,7 @@ p.profile-text{
     grid-area: d;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .psd-image-layout {
         grid-template:
             "a b"
@@ -341,7 +341,7 @@ p.profile-text{
     row-gap: 15px;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .ill-image-layout {
         grid-template:
             "e f"
@@ -400,7 +400,7 @@ p.profile-text{
     row-gap: 15px;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .web-image-layout {
         grid-template:
             "m n"
@@ -442,7 +442,7 @@ p.profile-text{
     row-gap: 15px;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .other-proj-image-layout {
         grid-template:
             "q r"
@@ -485,7 +485,7 @@ p.profile-text{
     row-gap: 15px;
 }
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 1200px) {
     .thea-image-layout {
         grid-template:
             "u v"
