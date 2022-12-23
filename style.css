@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
     background-color: white;
     height: 100%;
     width: 100%;
@@ -6,7 +7,7 @@ html, body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-h1{
+h1 {
     font-family: 'Pacifico', cursive;
     font-weight: 300;
     font-size: 40px;
@@ -16,128 +17,171 @@ h1{
 
 }
 
-h2{
+h2 {
     font-family: 'Ralweay', sans-serif;
     font-weight: 300;
     text-align: center;
     font-size: 25px;
 }
 
-p{
+p,
+li {
     font-family: 'Ralweay', sans-serif;
     font-weight: 400;
     text-align: center;
-    font-size: 20px;  
+    font-size: 20px;
 }
 
-a{
+
+a {
     all: unset;
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
-.margin-top{
+.margin-top {
     margin: 74px auto;
 }
 
-.sub-header-rec{
+.sub-header-rec {
     width: 325px;
     height: 30px;
     margin: 10px auto;
     background: linear-gradient(0deg, #F8E4DB 50%, white 0%);
 }
 
-.top-button{
-    padding-left: 50%;
+.top-button {
+    margin-left: 47%;
+}
+
+.page-description {
+    padding: 15px 5px;
 }
 
 /*Navigation Bar*/
-.main-nav{
+.main-nav {
     width: 100%;
     height: 147px;
 }
 
-.nav-tab{
+.nav-tab {
     width: 963px;
     height: 90px;
     margin: 0px auto;
     display: flex;
-
 }
 
-.header-tab{
+.header-tab {
     width: 25%;
 }
 
-.header-tab:hover{
+.header-tab:hover {
     background: #d89a9e;
     border-bottom: 4px solid black;
 }
 
+.header-tab:hover .header-tab-bold {
+    font-style: italic;
+}
+
+.header-tab-active {
+    background: #d89a9e;
+    border-bottom: 4px solid black;
+}
+
+.main-nav h1:hover {
+    background: #4D7298;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5px black;
+}
+
+
 /*Colours*/
-.beige{
+.beige {
     background-color: #F8E4DB;
 }
 
-.light-pink{
+.light-pink {
     background-color: #d89a9e;
+}
+
+.blue {
+    background-color: #4D7298;
+}
+
+.green {
+    background-color: #AEB4A9;
+}
+
+.dark-pink {
+    background-color: #C37D92;
 }
 
 /*About Page*/
 
-.about{
+.page-body {
     height: auto;
     width: 963px;
-    margin: 0px auto;
-    background: none;   
+    margin: 0px auto 25px;
+    background: none;
 }
 
-.about-header{
+.body-header {
     height: 90px;
     width: 478px;
-
 }
 
-.rectangle{
+.rectangle {
     width: 325px;
     height: 60px;
     opacity: .75;
 }
 
-.bottom-rec{
+.bottom-rec {
     margin-top: 30px;
     position: absolute;
 }
 
-.top-rec{
+.top-rec {
     position: absolute;
     margin-left: 153px;
     padding-top: 0px;
 }
 
-/*About - Profile*/
-
-.profile{
-    height: 226px;
-    width: 963px;
-    background-color: none;
-    position: relative;
+.bottom-rec-other {
+    margin-top: 35px;
+    position: absolute;
 }
 
-.profile-text-back{
+.rectangle-other {
+    width: 390px;
+    height: 60px;
+    opacity: .75;
+}
+
+/*About - Profile*/
+
+.profile {
+    height: 226px;
+    width: 963px;
+
+}
+
+.profile-text-back {
     width: 867px;
     height: auto;
     margin: 36px 0px 0px 96px;
     position: absolute;
 }
 
-p.profile-text{
+p.profile-text {
     margin-left: 153px;
 }
 
-.circle-image{
+.circle-image {
     height: 226px;
     width: 226px;
     object-fit: cover;
@@ -148,7 +192,7 @@ p.profile-text{
 
 /*About - Education*/
 
-.about-institution{
+.about-institution {
     height: 113px;
     width: auto;
     margin: 0px 63px 0px 63px;
@@ -156,42 +200,275 @@ p.profile-text{
     display: flex;
 }
 
-.edu-img{
+.edu-img {
     height: 113px;
     width: 113px;
     object-fit: cover;
 }
 
-.about-text{
+.about-text {
     width: 715px;
     margin-left: 72px;
 }
 
-.school{
+.school {
     display: flex;
     justify-content: space-between;
     font-style: italic;
 }
 
 /*About - Certifications*/
-.about-cert-institution{
+.about-cert-institution {
     padding: 15px 0px;
     display: flex;
 }
 
-.about-cert-text{
+.about-cert-text {
     width: 963px;
     margin: 0px 72px;
 }
 
 /*About - Skills*/
-.about-skill-text p{
+.about-skill-text p {
     width: 963px;
     margin: 0px 72px;
     padding: 10px 0px;
     text-align: left;
 }
 
-.skill-italic{
+.skill-italic {
     font-style: italic;
+}
+
+/*Visual Art Page*/
+
+.img-box {
+    width: 225px;
+}
+
+.img-container {
+    position: relative;
+}
+
+.visual-text-overlay {
+    width: 225px;
+    position: absolute;
+    text-align: center;
+    top: 0px;
+    opacity: 0;
+}
+
+.img-container:hover .img-box {
+    opacity: 0.5;
+}
+
+.img-container:hover .visual-text-overlay {
+    opacity: 1;
+}
+
+/*Visual Art - PSD Grid*/
+
+.psd-image-layout {
+    width: auto;
+    height: auto;
+    padding: 15px 0px;
+
+    display: grid;
+    grid-template:
+        "a b c d"
+    ;
+
+    justify-content: space-evenly;
+}
+
+.psd1 {
+    grid-area: a;
+}
+
+.psd2 {
+    grid-area: b;
+}
+
+.psd3 {
+    grid-area: c;
+}
+
+.psd4 {
+    grid-area: d;
+}
+
+@media only screen and (max-width: 800px) {
+    .psd-image-layout {
+        grid-template:
+            "a"
+            "b"
+            "c"
+            "d"
+        ;
+    }
+}
+
+/*Visual Art - Illustrator Grid*/
+
+.ill-image-layout {
+    width: auto;
+    height: auto;
+    padding: 15px 0px;
+
+    display: grid;
+    grid-template:
+        "e f g h"
+        "i j k l"
+    ;
+
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+
+.psd5 {
+    grid-area: e;
+}
+
+.psd6 {
+    grid-area: f;
+}
+
+.psd7 {
+    grid-area: g;
+}
+
+.psd8 {
+    grid-area: h;
+}
+
+.psd9 {
+    grid-area: i;
+}
+
+.psd10 {
+    grid-area: j;
+}
+
+.psd11 {
+    grid-area: k;
+}
+
+.psd12 {
+    grid-area: l;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .ill-image-layout {
+        grid-template:
+            "a"
+            "b"
+            "c"
+            "d"
+            "e"
+            "f"
+            "g"
+            "h"
+            "i"
+            "j"
+            "k"
+            "l"
+        ;
+    }
+}
+
+/*Visual Art - Website Design Grid*/
+
+.web-image-layout {
+    width: auto;
+    height: auto;
+    padding: 15px 0px;
+
+    display: grid;
+    grid-template:
+        "m n o p"
+    ;
+
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+
+.psd13 {
+    grid-area: m;
+}
+
+.psd14 {
+    grid-area: n;
+}
+
+.psd15 {
+    grid-area: o;
+}
+
+.psd16 {
+    grid-area: p;
+}
+
+/*Visual Art - Other Projects Grid*/
+
+.other-proj-image-layout {
+    width: auto;
+    height: auto;
+    padding: 15px 0px;
+
+    display: grid;
+    grid-template:
+        "q r s t"
+    ;
+
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+
+.psd17 {
+    grid-area: q;
+}
+
+.psd18 {
+    grid-area: r;
+}
+
+.psd19 {
+    grid-area: s;
+}
+
+.psd20 {
+    grid-area: t;
+}
+
+/*Other Work Page*/
+.left-align p,
+li{
+    text-align: left;
+}
+
+/*Contact Page*/
+.contact-info{
+    height: 446px;
+    width: 769px;
+
+    margin: 0px auto;
+    display: flex;
+    position: relative;
+}
+
+.contact-img{
+    height: 286px;
+    width: 480px;
+    position: absolute;
+    object-fit: cover;
+}
+
+.back-img{
+    bottom: 0px;
+    right: 0px;
+}
+
+.info h2{
+    padding-top: 40px;
 }
