@@ -7,6 +7,12 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+@media only screen and (max-width: 870px) {
+    .html, body {
+        min-width: 777px;
+    }
+}
+
 h1 {
     font-family: 'Pacifico', cursive;
     font-weight: 300;
@@ -22,6 +28,7 @@ h2 {
     font-weight: 300;
     text-align: center;
     font-size: 25px;
+    margin: 0px;
 }
 
 p,
@@ -67,26 +74,43 @@ a:hover {
 }
 
 .nav-tab {
-    width: 963px;
-    height: 90px;
+    width: 70%;
     margin: 0px auto;
-    display: flex;
+    align-content: center;
+
+    display: grid;
+    grid-template:
+        "vis theat other contact" 90px
+    ;
 }
 
-.header-tab {
-    width: 25%;
+.nav-pad{
+    padding: 15px 0px;
 }
 
-.header-tab:hover {
+.visual-art-nav{
+    grid-area: vis;
+}
+
+.theatre-nav{
+    grid-area: theat;
+}
+
+.other-work-nav{
+    grid-area: other;
+}
+
+.contact-nav{
+    grid-area: contact;
+}
+
+.nav-pad:hover{
     background: #d89a9e;
     border-bottom: 4px solid black;
-}
-
-.header-tab:hover .header-tab-bold {
     font-style: italic;
 }
 
-.header-tab-active {
+.nav-active{
     background: #d89a9e;
     border-bottom: 4px solid black;
 }
@@ -124,7 +148,7 @@ a:hover {
 
 .page-body {
     height: auto;
-    width: 963px;
+    width: 70%;
     margin: 0px auto 25px;
     background: none;
 }
@@ -165,20 +189,16 @@ a:hover {
 /*About - Profile*/
 
 .profile {
-    height: 226px;
-    width: 963px;
-
-}
-
-.profile-text-back {
-    width: 867px;
     height: auto;
-    margin: 36px 0px 0px 96px;
-    position: absolute;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-p.profile-text {
-    margin-left: 153px;
+p.profile-text{
+    width: 80%;
+    padding: 30px 15px;
 }
 
 .circle-image {
@@ -186,14 +206,12 @@ p.profile-text {
     width: 226px;
     object-fit: cover;
     border-radius: 100%;
-    position: absolute;
-    object-position: 0% 10%;
 }
 
 /*About - Education*/
 
 .about-institution {
-    height: 113px;
+    height: auto;
     width: auto;
     margin: 0px 63px 0px 63px;
     padding: 47px 0px;
@@ -230,7 +248,7 @@ p.profile-text {
 
 /*About - Skills*/
 .about-skill-text p {
-    width: 963px;
+    width: auto;
     margin: 0px 72px;
     padding: 10px 0px;
     text-align: left;
@@ -297,13 +315,11 @@ p.profile-text {
     grid-area: d;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 870px) {
     .psd-image-layout {
         grid-template:
-            "a"
-            "b"
-            "c"
-            "d"
+            "a b"
+            "c d"
         ;
     }
 }
@@ -323,6 +339,17 @@ p.profile-text {
 
     justify-content: space-evenly;
     row-gap: 15px;
+}
+
+@media only screen and (max-width: 870px) {
+    .ill-image-layout {
+        grid-template:
+            "e f"
+            "g h"
+            "i j"
+            "k l"
+        ;
+    }
 }
 
 .psd5 {
@@ -357,26 +384,6 @@ p.profile-text {
     grid-area: l;
 }
 
-
-@media only screen and (max-width: 800px) {
-    .ill-image-layout {
-        grid-template:
-            "a"
-            "b"
-            "c"
-            "d"
-            "e"
-            "f"
-            "g"
-            "h"
-            "i"
-            "j"
-            "k"
-            "l"
-        ;
-    }
-}
-
 /*Visual Art - Website Design Grid*/
 
 .web-image-layout {
@@ -392,6 +399,16 @@ p.profile-text {
     justify-content: space-evenly;
     row-gap: 15px;
 }
+
+@media only screen and (max-width: 870px) {
+    .web-image-layout {
+        grid-template:
+            "m n"
+            "o p"
+        ;
+    }
+}
+
 
 .psd13 {
     grid-area: m;
@@ -425,6 +442,16 @@ p.profile-text {
     row-gap: 15px;
 }
 
+@media only screen and (max-width: 870px) {
+    .other-proj-image-layout {
+        grid-template:
+            "q r"
+            "s t"
+        ;
+    }
+}
+
+
 .psd17 {
     grid-area: q;
 }
@@ -440,6 +467,61 @@ p.profile-text {
 .psd20 {
     grid-area: t;
 }
+
+/*Theatre Page*/
+
+.thea-image-layout {
+    width: auto;
+    height: auto;
+    padding: 15px 0px;
+
+    display: grid;
+    grid-template:
+    "u v w x"
+    "y z t1 t2"
+    ;
+
+    justify-content: space-evenly;
+    row-gap: 15px;
+}
+
+@media only screen and (max-width: 870px) {
+    .thea-image-layout {
+        grid-template:
+            "u v"
+            "w x"
+            "y z"
+            "t1 t2"
+        ;
+    }
+}
+
+.psd21 {
+    grid-area: u;
+}
+.psd22 {
+    grid-area: v;
+}
+.psd23 {
+    grid-area: w;
+}
+.psd24 {
+    grid-area: x;
+}
+.psd25 {
+    grid-area: y;
+}
+.psd26 {
+    grid-area: z;
+}
+.psd27 {
+    grid-area: t1;
+}
+.psd28 {
+    grid-area: t2;
+}
+
+
 
 /*Other Work Page*/
 .left-align p,
