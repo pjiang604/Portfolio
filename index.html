@@ -21,7 +21,7 @@
 </head>
 
 <nav>
-    <div class="main-nav light-pink">
+    <div class="main-nav light-pink" id="main-nav">
         <a href="index.html">
             <h1>Patricia Jiang</h1>
         </a>
@@ -29,7 +29,7 @@
     </div>
 </nav>
 
-<nav class="sub-nav">
+<nav class="sub-nav" id="sub-nav">
     <a href="visual-art.html" class="nav-box">
         <h2>Visual Art</h2>
     </a>
@@ -46,6 +46,31 @@
         <h2>Contact</h2>
     </a>
 </nav>
+
+<nav class="mobileNav">
+    <div id="categories" class="categories">
+        <a href="visual-art.html">
+            <p>Visual Art</p>
+        </a>
+    
+        <a href="theatre.html">
+            <p>Theatre</p>
+        </a>
+    
+        <a href="other-work.html">
+            <p>Other Work &<br>Volunteer Experiences</p>
+        </a>
+    
+        <a href="contact.html">
+            <p>Contact</p>
+        </a>
+    </div>
+
+    <div class="iHamContainer" onclick="menuToggle()">
+        <div id="iBar1" class="iHamburger"></div>
+        <div id="iBar2" class="iHamburger"></div>
+        <div id="iBar3" class="iHamburger"></div>
+    </div>
 
 <body>
 
@@ -167,9 +192,26 @@
     </div>
 
     <footer>
-        <a href="#top"><img src="images/Top-button.png" alt="" class="top-button"></a>
+        <a href="#main-nav"><img src="images/Top-button.png" alt="" class="top-button"></a>
     </footer>
 
 </body>
+
+
+<script>
+        //Navigation Bar
+        var navMobile = document.getElementById("categories");
+        var iBar1 = document.getElementById("iBar1")
+        var iBar2 = document.getElementById("iBar2")
+        var iBar3 = document.getElementById("iBar3")
+
+        function menuToggle(){
+            categories.classList.toggle("navOpen");
+            iBar1.classList.toggle("iChange1");
+            iBar2.classList.toggle("iChange2");
+            iBar3.classList.toggle("iChange3");
+        }
+
+</script>
 
 </html>

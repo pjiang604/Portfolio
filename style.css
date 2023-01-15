@@ -1,6 +1,5 @@
 /*TO DO
 -fix the sub-heading rectangles. They shift with responsiveness. 
--Add javascript to the nav bar so it collapses into an icon on mobile/ipad
 -fine tune padding/margins so it's all consistent
 */
 
@@ -13,6 +12,7 @@ body {
     width: 100%;
     margin: 0px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    scroll-behavior: smooth;
 }
 
 @media only screen and (max-width: 500px) {
@@ -73,7 +73,7 @@ a:hover {
     margin: 5px auto;
 }
 
-footer{
+footer {
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -128,8 +128,68 @@ footer{
     -webkit-text-stroke: 0.5px black;
 }
 
+.categories {
+    display: none;
+    visibility: hidden;
+}
+
 /*Nav for Mobile*/
-@media only screen and (max-width: 500px) {}
+@media only screen and (max-width: 500px) {
+
+    .sub-nav {
+        display: none;
+    }
+
+    .navOpen {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 30vw;
+        gap: 2vw;
+        background-color: #F8E4DB;
+        padding: 1vw;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+
+    .iHamburger {
+        width: 35px;
+        height: 4px;
+        background-color: black;
+        border-radius: 25px;
+        margin: 3px 0;
+        transition: 500ms;
+    }
+
+    .iHamContainer {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .iChange1 {
+        transform: translate(0, 10px) rotate(-45deg);
+    }
+
+    .iChange2 {
+        opacity: 0;
+    }
+
+    .iChange3 {
+        transform: translate(0, -10px) rotate(45deg);
+    }
+
+    .nav-active {
+        background: #d89a9e;
+        border-bottom: 4px solid black;
+    }
+}
 
 
 /*Colours*/
@@ -340,7 +400,7 @@ p.profile-text {
 
 /*Visual Art - PSD Grid*/
 
-.psd-image-layout{
+.psd-image-layout {
     width: 60vw;
     padding-top: 1vw;
     padding-bottom: 1vw;
@@ -364,7 +424,7 @@ li {
 }
 
 @media only screen and (max-width: 500px) {
-    .left-align p{
+    .left-align p {
         text-align: center;
     }
 }
@@ -402,13 +462,13 @@ li {
         margin: 0px auto;
         display: flex;
     }
-    
+
     .contact-img {
         height: 40vh;
         width: 60vw;
         object-fit: cover;
     }
-    
+
     .back-img {
         bottom: 0px;
         left: 0px;
