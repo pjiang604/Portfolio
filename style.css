@@ -1,3 +1,5 @@
+:root {}
+
 html,
 body {
     background-color: white;
@@ -7,17 +9,20 @@ body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-@media only screen and (max-width: 1200px) {
-    .html, body {
+@media only screen and (max-width: 500px) {
+
+    .html,
+    body {
         min-width: 777px;
     }
 }
+
+
 
 h1 {
     font-family: 'Pacifico', cursive;
     font-weight: 300;
     font-size: 40px;
-    text-align: center;
     margin: 0px;
     padding-top: 10px;
 
@@ -26,17 +31,22 @@ h1 {
 h2 {
     font-family: 'Ralweay', sans-serif;
     font-weight: 300;
+    font-size: 22px;
     text-align: center;
-    font-size: 25px;
-    margin: 0px;
+}
+
+h3 {
+    font-family: 'Ralweay', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+
 }
 
 p,
 li {
     font-family: 'Ralweay', sans-serif;
     font-weight: 400;
-    text-align: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -53,14 +63,15 @@ a:hover {
 }
 
 .sub-header-rec {
-    width: 325px;
-    height: 30px;
-    margin: 10px auto;
-    background: linear-gradient(0deg, #F8E4DB 50%, white 0%);
+    width: 25vw;
+    margin: 5px auto;
 }
 
-.top-button {
-    margin-left: 47%;
+footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 1vw;
 }
 
 .page-description {
@@ -68,49 +79,35 @@ a:hover {
 }
 
 /*Navigation Bar*/
+
 .main-nav {
-    width: 100%;
-    height: 147px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.nav-tab {
-    width: 70%;
-    margin: 0px auto;
-    align-content: center;
-
-    display: grid;
-    grid-template:
-        "vis theat other contact" 90px
-    ;
+.sub-nav {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
-.nav-pad{
-    padding: 15px 0px;
+.nav-box {
+    width: 15vw;
+    background-color: lightblue;
+    text-align: center;
+    padding: 8px 0px;
+    background: #F8E4DB;
 }
 
-.visual-art-nav{
-    grid-area: vis;
-}
-
-.theatre-nav{
-    grid-area: theat;
-}
-
-.other-work-nav{
-    grid-area: other;
-}
-
-.contact-nav{
-    grid-area: contact;
-}
-
-.nav-pad:hover{
+.nav-box:hover {
     background: #d89a9e;
     border-bottom: 4px solid black;
     font-style: italic;
 }
 
-.nav-active{
+.nav-active {
     background: #d89a9e;
     border-bottom: 4px solid black;
 }
@@ -121,6 +118,9 @@ a:hover {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0.5px black;
 }
+
+/*Nav for Mobile*/
+@media only screen and (max-width: 500px) {}
 
 
 /*Colours*/
@@ -148,55 +148,54 @@ a:hover {
 
 .page-body {
     height: auto;
-    width: 70%;
-    margin: 0px auto 25px;
+    width: 100vw;
     background: none;
+
 }
 
 .body-header {
-    height: 90px;
-    width: 478px;
+    height: 15vh;
+    width: 30vw;
+    position: relative;
 }
 
 .rectangle {
-    width: 325px;
-    height: 60px;
+    width: 20vw;
+    height: 11vh;
     opacity: .75;
 }
 
 .bottom-rec {
-    margin-top: 30px;
     position: absolute;
+    left: 0;
+    bottom: 0;
+
 }
 
 .top-rec {
     position: absolute;
-    margin-left: 153px;
-    padding-top: 0px;
+    right: 0;
+    top: 0;
 }
 
-.bottom-rec-other {
-    margin-top: 35px;
+.page-title {
     position: absolute;
+    left: 10vw;
 }
 
-.rectangle-other {
-    width: 390px;
-    height: 60px;
-    opacity: .75;
-}
 
 /*About - Profile*/
 
 .profile {
     height: auto;
-    width: auto;
+    width: 60vw;
     display: flex;
     flex-direction: row;
     align-items: center;
+    background-image: linear-gradient(to left, rgba(248, 228, 219, 1), rgba(248, 228, 219, 0));
 }
 
-p.profile-text{
+p.profile-text {
     width: 80%;
     padding: 30px 15px;
 }
@@ -209,41 +208,51 @@ p.profile-text{
 }
 
 /*About - Education*/
+.education {
+    height: auto;
+    width: 60vw;
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-left: 20vw;
+}
 
 .about-institution {
     height: auto;
-    width: auto;
-    margin: 0px 63px 0px 63px;
-    padding: 47px 0px;
+    width: 60vw;
     display: flex;
+    padding-left: 2.5vw;
 }
 
 .edu-img {
     height: 113px;
     width: 113px;
     object-fit: cover;
-}
-
-.about-text {
-    width: 715px;
-    margin-left: 72px;
+    padding-right: 5vw;
 }
 
 .school {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-style: italic;
+    margin-right: 7vw;
 }
 
 /*About - Certifications*/
-.about-cert-institution {
-    padding: 15px 0px;
-    display: flex;
-}
 
 .about-cert-text {
-    width: 963px;
-    margin: 0px 72px;
+    height: auto;
+    width: 60vw;
+    display: flex;
+    padding-left: 2.5vw;
+}
+
+.school-cert {
+    width: 46vw;
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
 }
 
 /*About - Skills*/
@@ -256,6 +265,39 @@ p.profile-text{
 
 .skill-italic {
     font-style: italic;
+}
+
+/*About for Mobile*/
+@media only screen and (max-width: 500px) {
+    .profile {
+        width: 60vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .page-title {
+        left: 0;
+    }
+
+    .profile {
+        background-image: linear-gradient(to top, rgba(248, 228, 219, 1), rgba(248, 228, 219, 0));
+    }
+
+    .about-institution {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 2.5vw;
+    }
+
+    .about-cert-text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-left: 0;
+    }
+
 }
 
 /*Visual Art Page*/
@@ -477,8 +519,8 @@ p.profile-text{
 
     display: grid;
     grid-template:
-    "u v w x"
-    "y z t1 t2"
+        "u v w x"
+        "y z t1 t2"
     ;
 
     justify-content: space-evenly;
@@ -499,24 +541,31 @@ p.profile-text{
 .psd21 {
     grid-area: u;
 }
+
 .psd22 {
     grid-area: v;
 }
+
 .psd23 {
     grid-area: w;
 }
+
 .psd24 {
     grid-area: x;
 }
+
 .psd25 {
     grid-area: y;
 }
+
 .psd26 {
     grid-area: z;
 }
+
 .psd27 {
     grid-area: t1;
 }
+
 .psd28 {
     grid-area: t2;
 }
@@ -525,12 +574,12 @@ p.profile-text{
 
 /*Other Work Page*/
 .left-align p,
-li{
+li {
     text-align: left;
 }
 
 /*Contact Page*/
-.contact-info{
+.contact-info {
     height: 446px;
     width: 769px;
 
@@ -539,18 +588,18 @@ li{
     position: relative;
 }
 
-.contact-img{
+.contact-img {
     height: 286px;
     width: 480px;
     position: absolute;
     object-fit: cover;
 }
 
-.back-img{
+.back-img {
     bottom: 0px;
     right: 0px;
 }
 
-.info h2{
+.info h2 {
     padding-top: 40px;
 }
