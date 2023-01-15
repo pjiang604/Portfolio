@@ -1,3 +1,9 @@
+/*TO DO
+-fix the sub-heading rectangles. They shift with responsiveness. 
+-Add javascript to the nav bar so it collapses into an icon on mobile/ipad
+-fine tune padding/margins so it's all consistent
+*/
+
 :root {}
 
 html,
@@ -75,7 +81,10 @@ footer{
 }
 
 .page-description {
-    padding: 15px 5px;
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 1vw;
+    text-align: center;
 }
 
 /*Navigation Bar*/
@@ -150,6 +159,9 @@ footer{
     height: auto;
     width: 100vw;
     background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -303,7 +315,7 @@ p.profile-text {
 /*Visual Art Page*/
 
 .img-box {
-    width: 225px;
+    width: 224px;
 }
 
 .img-container {
@@ -311,7 +323,7 @@ p.profile-text {
 }
 
 .visual-text-overlay {
-    width: 225px;
+    width: 224px;
     position: absolute;
     text-align: center;
     top: 0px;
@@ -328,248 +340,14 @@ p.profile-text {
 
 /*Visual Art - PSD Grid*/
 
-.psd-image-layout {
-    width: auto;
-    height: auto;
-    padding: 15px 0px;
-
-    display: grid;
-    grid-template:
-        "a b c d"
-    ;
-
+.psd-image-layout{
+    width: 60vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-
-.psd1 {
-    grid-area: a;
-}
-
-.psd2 {
-    grid-area: b;
-}
-
-.psd3 {
-    grid-area: c;
-}
-
-.psd4 {
-    grid-area: d;
-}
-
-@media only screen and (max-width: 1200px) {
-    .psd-image-layout {
-        grid-template:
-            "a b"
-            "c d"
-        ;
-    }
-}
-
-/*Visual Art - Illustrator Grid*/
-
-.ill-image-layout {
-    width: auto;
-    height: auto;
-    padding: 15px 0px;
-
-    display: grid;
-    grid-template:
-        "e f g h"
-        "i j k l"
-    ;
-
-    justify-content: space-evenly;
-    row-gap: 15px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .ill-image-layout {
-        grid-template:
-            "e f"
-            "g h"
-            "i j"
-            "k l"
-        ;
-    }
-}
-
-.psd5 {
-    grid-area: e;
-}
-
-.psd6 {
-    grid-area: f;
-}
-
-.psd7 {
-    grid-area: g;
-}
-
-.psd8 {
-    grid-area: h;
-}
-
-.psd9 {
-    grid-area: i;
-}
-
-.psd10 {
-    grid-area: j;
-}
-
-.psd11 {
-    grid-area: k;
-}
-
-.psd12 {
-    grid-area: l;
-}
-
-/*Visual Art - Website Design Grid*/
-
-.web-image-layout {
-    width: auto;
-    height: auto;
-    padding: 15px 0px;
-
-    display: grid;
-    grid-template:
-        "m n o p"
-    ;
-
-    justify-content: space-evenly;
-    row-gap: 15px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .web-image-layout {
-        grid-template:
-            "m n"
-            "o p"
-        ;
-    }
-}
-
-
-.psd13 {
-    grid-area: m;
-}
-
-.psd14 {
-    grid-area: n;
-}
-
-.psd15 {
-    grid-area: o;
-}
-
-.psd16 {
-    grid-area: p;
-}
-
-/*Visual Art - Other Projects Grid*/
-
-.other-proj-image-layout {
-    width: auto;
-    height: auto;
-    padding: 15px 0px;
-
-    display: grid;
-    grid-template:
-        "q r s t"
-    ;
-
-    justify-content: space-evenly;
-    row-gap: 15px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .other-proj-image-layout {
-        grid-template:
-            "q r"
-            "s t"
-        ;
-    }
-}
-
-
-.psd17 {
-    grid-area: q;
-}
-
-.psd18 {
-    grid-area: r;
-}
-
-.psd19 {
-    grid-area: s;
-}
-
-.psd20 {
-    grid-area: t;
-}
-
-/*Theatre Page*/
-
-.thea-image-layout {
-    width: auto;
-    height: auto;
-    padding: 15px 0px;
-
-    display: grid;
-    grid-template:
-        "u v w x"
-        "y z t1 t2"
-    ;
-
-    justify-content: space-evenly;
-    row-gap: 15px;
-}
-
-@media only screen and (max-width: 1200px) {
-    .thea-image-layout {
-        grid-template:
-            "u v"
-            "w x"
-            "y z"
-            "t1 t2"
-        ;
-    }
-}
-
-.psd21 {
-    grid-area: u;
-}
-
-.psd22 {
-    grid-area: v;
-}
-
-.psd23 {
-    grid-area: w;
-}
-
-.psd24 {
-    grid-area: x;
-}
-
-.psd25 {
-    grid-area: y;
-}
-
-.psd26 {
-    grid-area: z;
-}
-
-.psd27 {
-    grid-area: t1;
-}
-
-.psd28 {
-    grid-area: t2;
-}
-
 
 
 /*Other Work Page*/
@@ -578,19 +356,31 @@ li {
     text-align: left;
 }
 
+.school {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .left-align p{
+        text-align: center;
+    }
+}
+
 /*Contact Page*/
 .contact-info {
-    height: 446px;
-    width: 769px;
-
+    height: 60vh;
+    width: 60vw;
     margin: 0px auto;
     display: flex;
     position: relative;
 }
 
 .contact-img {
-    height: 286px;
-    width: 480px;
+    height: 40vh;
+    width: 35vw;
     position: absolute;
     object-fit: cover;
 }
@@ -602,4 +392,26 @@ li {
 
 .info h2 {
     padding-top: 40px;
+}
+
+/*Contact for Mobile*/
+@media only screen and (max-width: 500px) {
+    .contact-info {
+        height: 80vh;
+        width: 60vw;
+        margin: 0px auto;
+        display: flex;
+    }
+    
+    .contact-img {
+        height: 40vh;
+        width: 60vw;
+        object-fit: cover;
+    }
+    
+    .back-img {
+        bottom: 0px;
+        left: 0px;
+    }
+
 }
