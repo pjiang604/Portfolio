@@ -25,6 +25,12 @@ a {
     color: inherit;
 }
 
+a:hover {
+    font-weight: 600;
+
+}
+
+
 /*NAV*/
 
 nav {
@@ -54,13 +60,17 @@ body {
     gap: 8em;
 }
 
+.scroller {
+    display: flex;
+}
+
 .grid {
     display: grid;
     grid-template:
         "A A B C D" 212px
         "A A E E D" 212px
         "F G E E D" 212px
-        "H H I J J" 212px
+        /*"H H I J J" 212px*/
     ;
     gap: 1em;
     box-sizing: border-box;
@@ -94,6 +104,8 @@ body {
     grid-area: G;
 }
 
+/*
+
 .imgH {
     grid-area: H;
 }
@@ -104,7 +116,7 @@ body {
 
 .imgJ {
     grid-area: J;
-}
+}*/
 
 .toTop {
     width: 100%;
@@ -148,6 +160,8 @@ body {
     background-color: white;
     position: absolute;
     left: 20%;
+    padding-top: 3em;
+    box-sizing: border-box;
 }
 
 .bottomBox {
@@ -155,21 +169,27 @@ body {
     width: 25em;
     border: 3px solid var(--navy);
     background-color: white;
-    z-index: -1;
     position: absolute;
     right: 20%;
     top: 60%;
+    padding-top: 3em;
+    box-sizing: border-box;
 
 }
 
-.contact > div > p {
-    padding-top: 3em;
+/*VIDEO*/
+
+.plant{
+    height: 40em;
+    width: 100%;
+    background: lightpink;
 }
 
 /*IMAGES*/
 
-img:hover{
-    border: 2px solid black;
+.grid > div > img:hover, .scroller > img:hover {
+    border: 2px solid var(--navy);
+    border-radius: 5px;
 }
 
 .logoImg {
@@ -177,16 +197,10 @@ img:hover{
 }
 
 .scrollerImg {
-    height: 15em;
+    height: 40em;
     width: 100%;
-    object-fit: cover;
-    margin: 0.5em 0;
-}
-
-.gridImg {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    margin: 0.5em 1em;
+    object-fit: contain;
 }
 
 .headshot {
@@ -195,17 +209,53 @@ img:hover{
     object-fit: cover;
 }
 
+.linkedinImg {
+    height: 2em;
+    width: 2em;
+    object-fit: cover;
+}
 
-.toTopButton{
+.linkedinImg:hover {
+    border: none;
+    border-radius: 0%;
+}
+
+.toTopButton {
     height: 4em;
     width: 4em;
     background-image: url(images/toTopButtonBlue.svg);
     background-size: cover;
 }
 
-.toTopButton:hover{
-
+.toTopButton:hover {
     background-image: url(images/toTopButtonPink.svg);
 
+}
 
+/*GRID IMAGES*/
+
+
+
+.gridImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.dog{
+    object-fit: contain;
+}
+
+.trainlogo{
+    object-fit: contain;
+}
+
+
+
+/*HIDE FOR NOW*/
+
+.imgH,
+.imgI,
+.imgJ {
+    display: none;
 }
