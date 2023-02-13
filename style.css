@@ -25,10 +25,15 @@ a {
     color: inherit;
 }
 
-a:hover {
+.bottomBox:hover{
     font-weight: 600;
-
+    transition: 1s;
 }
+
+p{
+    margin-bottom: .1em;
+}
+
 
 
 /*NAV*/
@@ -62,6 +67,7 @@ body {
 
 .scroller {
     display: flex;
+    justify-content: space-between;
 }
 
 .grid {
@@ -69,7 +75,7 @@ body {
     grid-template:
         "A A B C D" 212px
         "A A E E D" 212px
-        "F G E E D" 212px
+        "F F E E D" 212px
         /*"H H I J J" 212px*/
     ;
     gap: 1em;
@@ -98,13 +104,14 @@ body {
 
 .imgF {
     grid-area: F;
-}
-
-.imgG {
-    grid-area: G;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*
+.imgG {
+    grid-area: G;
+}
 
 .imgH {
     grid-area: H;
@@ -117,6 +124,9 @@ body {
 .imgJ {
     grid-area: J;
 }*/
+
+
+
 
 .toTop {
     width: 100%;
@@ -179,7 +189,7 @@ body {
 
 /*VIDEO*/
 
-.plant{
+.plant {
     height: 40em;
     width: 100%;
     background: lightpink;
@@ -187,19 +197,74 @@ body {
 
 /*IMAGES*/
 
-.grid > div > img:hover, .scroller > img:hover {
+/*.grid>div>a>img:hover,
+.scroller>a>img:hover {
     border: 2px solid var(--navy);
     border-radius: 5px;
-}
+}*/
 
 .logoImg {
     height: 100%;
 }
 
 .scrollerImg {
+    margin: 0 1em;
+    position: relative;
+
+}
+
+.scrollerImg:hover>.hoverText {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.scrollerImg:hover > img {
+    opacity: 25%;
+    transition: 0.5s;
+}
+
+.hoverText {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 2em;
+    opacity: 0%;
+    z-index: 1;
+    padding: 0 1em;
+    box-sizing: border-box;
+}
+
+.gridContainer {
+    position: relative;
+
+}
+
+.gridContainer:hover>.gridText {
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.gridContainer:hover > img {
+    opacity: 25%;
+    transition: 0.5s;
+}
+
+.gridText{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    opacity: 0%;
+    z-index: 1;
+    padding: 0 1em;
+    margin-top: 0px;
+    box-sizing: border-box;
+}
+
+.library,
+.backpack,
+.catmag {
     height: 40em;
     width: 100%;
-    margin: 0.5em 1em;
     object-fit: contain;
 }
 
@@ -242,11 +307,11 @@ body {
     object-fit: cover;
 }
 
-.dog{
+.dog {
     object-fit: contain;
 }
 
-.trainlogo{
+.trainlogo {
     object-fit: contain;
 }
 
