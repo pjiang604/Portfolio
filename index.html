@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Patricia Jiang - Home</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
@@ -35,9 +36,9 @@
     </nav>
 
     <div class="scroller">
-        <a href="images/projects/libraryposter.png" target="_blank" class="scrollerImg">
+        <a href="images/projects/libraryposter.png" target="_blank" class="scrollerImg" onclick="toggle()">
             <p class="hoverText" id="library"></p>
-            <img src="images/projects/libraryposter.png" alt="" class="library">
+            <img src="images/projects/libraryposter.png" alt="" class="library disable">
         </a>
         <a href="images/projects/Backpack Ad.png" target="_blank" class="scrollerImg">
             <p class="hoverText" id="backpack"></p>
@@ -59,30 +60,34 @@
         <div class="imgB">
             <a href="images/projects/whitedog.png" target="_blank" class="gridContainer">
                 <p class="gridText" id="dog"></p>
-                <img src="images/projects/whitedog.png" alt="" class="gridImg dog"></a>
+                <img src="images/projects/whitedog.png" alt="" class="gridImg dog">
+            </a>
         </div>
         <div class="imgC">
             <a href="images/projects/LoverLogo.png" target="_blank" class="gridContainer">
                 <p class="gridText" id="lover"></p>
-                <img src="images/projects/LoverLogo.png" alt="" class="gridImg lover"></a>
+                <img src="images/projects/LoverLogo.png" alt="" class="gridImg lover">
+            </a>
         </div>
         <div class="imgD">
             <a href="images/projects/trainlogo.png" target="_blank" class="gridContainer">
                 <p class="gridText" id="train"></p>
-                <img src="images/projects/trainlogo.png" alt="" class="gridImg trainlogo"></a>
+                <img src="images/projects/trainlogo.png" alt="" class="gridImg trainlogo">
+            </a>
         </div>
         <div class="imgE">
             <a href="images/projects/world.png" target="_blank" class="gridContainer">
                 <p class="gridText" id="world"></p>
-                <img src="images/projects/world.png" alt="" class="gridImg world"></a>
+                <img src="images/projects/world.png" alt="" class="gridImg world">
+            </a>
         </div>
         <div class="imgF">
-            <a href="images/projects/colorizedphoto.png" target="_blank" class="gridContainer">
+            <a href="images/projects/schoolpic.png" target="_blank" class="gridContainer">
                 <p class="gridText" id="colorized"></p>
-                <img src="images/projects/colorizedphoto.png" alt="" class="gridImg psdphoto"></a>
-            <a href="images/projects/bwphoto.JPG" target="_blank">
-                <img src="images/projects/bwphoto.JPG" alt="" class="gridImg psdphoto"></a>
+                <img src="images/projects/schoolpic.png" alt="" class="gridImg psdphoto">
+            </a>
         </div>
+        <!-- [EXTRA GRID FIELDS]
         <div class="imgH">
             <img src="images/pads.jpeg" alt="" class="gridImg">
         </div>
@@ -91,13 +96,19 @@
         </div>
         <div class="imgJ">
             <img src="images/pads.jpeg" alt="" class="gridImg">
-        </div>
+        </div>-->
 
     </div>
 
     <div class="video">
-        <div class="plant">
-            video goes here
+        <video class="plant" controls>
+            <source src="images/projects/Plant.mp4" type="video/mp4">
+            Sorry, your browser doesn't support this video!
+        </video>
+        <div class="plantDescription">
+            <a onclick="toggle()"><h2>How to Care for Plants | Motion Graphics</h2></a>
+            <div id="plantText">
+            </div>
         </div>
     </div>
 
@@ -110,6 +121,6 @@
 
 </body>
 
-<script type="text/javascript" src="hovertext.js"></script>
+<script type="text/javascript" src="text.js"></script>
 
 </html>

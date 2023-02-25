@@ -25,12 +25,16 @@ a {
     color: inherit;
 }
 
-.bottomBox:hover{
+a:hover {
+    cursor: pointer;
+}
+
+.bottomBox:hover {
     font-weight: 600;
     transition: 1s;
 }
 
-p{
+p {
     margin-bottom: .1em;
 }
 
@@ -192,16 +196,32 @@ body {
 .plant {
     height: 40em;
     width: 100%;
-    background: lightpink;
+
 }
 
-/*IMAGES*/
+.plantDescription {
+    margin: 0.5em 15vw;
+    border: 1px solid var(--navy);
+    padding: 0.5em;
+    box-shadow: 0.25em 0.25em 0.5em var(--navy);
+    background-color: var(--white);
+}
 
-/*.grid>div>a>img:hover,
-.scroller>a>img:hover {
-    border: 2px solid var(--navy);
-    border-radius: 5px;
-}*/
+.plantDescription:hover {
+    box-shadow: 0.5em 0.5em 0.5em var(--navy);
+}
+
+.plantDescription>a>h2 {
+    text-align: center;
+}
+
+#plantText {
+    display: none;
+    padding: 1em 2em;
+}
+
+
+/*IMAGES*/
 
 .logoImg {
     height: 100%;
@@ -213,13 +233,15 @@ body {
 
 }
 
-.scrollerImg:hover>.hoverText {
+.scrollerImg:hover>.hoverText,
+.scrollerImg:active>.hoverText {
     opacity: 100%;
     transition: 0.5s;
 }
 
-.scrollerImg:hover > img {
-    opacity: 25%;
+.scrollerImg:hover>img,
+.scrollerImg:active>.img {
+    opacity: 15%;
     transition: 0.5s;
 }
 
@@ -244,12 +266,12 @@ body {
     transition: 0.5s;
 }
 
-.gridContainer:hover > img {
+.gridContainer:hover>img {
     opacity: 25%;
     transition: 0.5s;
 }
 
-.gridText{
+.gridText {
     width: 100%;
     position: absolute;
     text-align: center;
@@ -315,6 +337,247 @@ body {
     object-fit: contain;
 }
 
+/*Tablet*/
+@media only screen and (max-width: 850px) and (min-width: 451px) {
+
+    html {
+        padding: 5vh 10vw;
+        scroll-behavior: smooth;
+    }
+
+
+    p {
+        margin-bottom: .1em;
+    }
+
+    body {
+        gap: 2em;
+    }
+
+    .scroller {
+        display: flex;
+        flex-direction: column;
+        gap: 0em;
+    }
+
+    .hoverText,
+    .gridText {
+        position: inherit;
+        opacity: 100%;
+    }
+
+
+    .scroller>a,
+    .imgA>a,
+    .imgB>a,
+    .imgC>a,
+    .imgD>a,
+    .imgE>a,
+    .imgF>a {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
+    .grid {
+        grid-template:
+            "A A"
+            "B B"
+            "C C"
+            "D D"
+            "E E"
+            "F F"
+        ;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 2em;
+    }
+    
+    .profileText {
+        margin-left: 2em;
+    
+    }
+    
+    .topBox {
+        height: 12em;
+        width: 25em;
+        border: 3px solid var(--pink);
+        background-color: white;
+        position: absolute;
+        left: 30%;
+        padding-top: 3em;
+        box-sizing: border-box;
+    }
+    
+    .bottomBox {
+        height: 12em;
+        width: 25em;
+        border: 3px solid var(--navy);
+        background-color: white;
+        position: absolute;
+        right: 30%;
+        top: 80%;
+        padding-top: 3em;
+        box-sizing: border-box;
+    
+    }
+
+}
+
+/*Mobile*/
+@media only screen and (max-width: 450px) {
+
+    html {
+        padding: 5vh 10vw;
+        scroll-behavior: smooth;
+    }
+
+
+    p {
+        margin-bottom: .1em;
+    }
+
+
+
+    nav {
+        width: 100%;
+        height: 4em;
+        flex-direction: column;
+
+        justify-content: flex-start;
+    }
+
+    .navLinks {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .city {
+        text-align: center;
+    }
+
+    .logoImg {
+        height: 5em;
+    }
+
+    .scroller {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        margin-top: 5em;
+    }
+
+    .hoverText,
+    .gridText {
+        position: inherit;
+        opacity: 100%;
+        top: 0;
+    }
+
+    .library,
+    .backpack,
+    .catmag {
+        height: 20em;
+        width: 100%;
+        margin: 0;
+        object-fit: contain;
+    }
+
+
+    .scroller>a,
+    .imgA>a,
+    .imgB>a,
+    .imgC>a,
+    .imgD>a,
+    .imgE>a,
+    .imgF>a {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .grid {
+        grid-template:
+            "A A"
+            "B B"
+            "C C"
+            "D D"
+            "E E"
+            "F F"
+        ;
+        gap: 3em
+    }
+
+    .plant {
+        height: 20em;
+        width: 100%;
+
+    }
+
+    .plantDescription {
+        margin: 0.5em 5vw;
+        padding: 0.02em;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1em;
+    }
+    
+    .profileText {
+        margin-left: 1em;
+    
+    }
+
+    .headshot {
+        height: 20em;
+        width: 20em;
+        object-fit: cover;
+        margin-top: 5em;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        position: relative;
+        height: 16em;
+        width: 100%;
+        margin-bottom: 5em;
+        text-align: center;
+    
+    }
+    .topBox {
+        height: 8em;
+        width: 21em;
+        border: 3px solid var(--pink);
+        background-color: white;
+        position: static;
+        padding: 3em 0;
+    }
+    
+    .bottomBox {
+        height: 8em;
+        width: 21em;
+        border: 3px solid var(--navy);
+        background-color: white;
+        position: static;
+        padding: 3em 0;
+    
+    }
+
+}
 
 
 /*HIDE FOR NOW*/
